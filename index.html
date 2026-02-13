@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+
+  <!-- SDK (optional, keep if required) -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#6366f1",
+            secondary: "#8b5cf6"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="fixed w-full bg-gray-900/80 backdrop-blur-md border-b border-gray-800 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">MySite</h1>
+      <div class="space-x-6">
+        <a href="#home" class="hover:text-primary transition">Home</a>
+        <a href="#about" class="hover:text-primary transition">About</a>
+        <a href="#contact" class="hover:text-primary transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-secondary">
+    <div class="text-center px-6">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">
+        Welcome to My Website 🚀
+      </h1>
+      <p class="text-lg md:text-xl mb-8 opacity-90">
+        Your modern website is now ready.
+      </p>
+      <a href="#about" class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:scale-105 transition">
+        Get Started
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 bg-gray-900">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">About</h2>
+      <p class="text-gray-400 text-lg">
+        This is a fully functional website template. You can customize this section
+        to introduce yourself, your business, or your project. Built using modern,
+        fast, and responsive design principles.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-gray-800">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+      <p class="text-gray-400 mb-6">
+        Ready to connect? Click the button below.
+      </p>
+      <button onclick="contact()" class="bg-primary px-6 py-3 rounded-lg hover:bg-indigo-500 transition">
+        Contact Me
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 border-t border-gray-800 py-6 text-center text-gray-500">
+    © 2026 My Website. All rights reserved.
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function contact() {
+      alert("Contact feature coming soon.");
+    }
+
+    // SDK init (optional)
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig: {},
+        onConfigChange: async () => {},
+        mapToCapabilities: () => ({
+          recolorables: [],
+          borderables: []
+        }),
+        mapToEditPanelValues: () => new Map()
+      });
+    }
+  </script>
+
+</body>
+</html>
